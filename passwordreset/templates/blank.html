@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Member Succesful Signin{% endblock %}
+
+{% block page_id %}- Blank Page{% endblock %}
+
+{% block content %}
+	Hello {{ mFn }}. There is really nothing to be done here. Yeah really really -.-
+    <button class="buttons" type="button"><a href="{% url 'members.views.logout_view'%}" class="nodec">log(me)out</a></button>
+{% endblock %}

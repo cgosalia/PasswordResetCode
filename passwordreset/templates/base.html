@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+
+<title>{% block title %}{% endblock %}</title>
+<!-- <link rel="stylesheet" type="text/css" href= "{% static "assets/css/base.css" %}" />
+
+<script src="{% static "assets/js/jquery-2.0.0.min.js" %}" ></script>
+<script src="{% static "assets/js/ajax.js" %}" ></script>-->
+
+{% block extra_head %}    
+	<script type="text/javascript">
+    function validateFields(i)
+    {
+      if(i ==0){
+        var regex_test = /^[a-z0-9_-]{3,15}$/;
+        return regex_test.test(login_form.usernameText.value);
+      }
+      else if(i == 1)  
+      {
+        var regex_test = /^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#_$%]).{6,20})$/;
+        return regex_test.test(login_form.passwordText.value);
+      }
+      else 
+      {
+          var regex_test = /^[a-z0-9_-]{3,15}$/;
+          var regex_test = /^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#_$%]).{6,20})$/;
+          return regex_test.test(login_form.usernameText.value) && regex_test.test(login_form.passwordText.value);
+      }
+    }
+    </script>
+    
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-right: 40px;
+        padding-left: 40px;
+        background-color: #ffffff;
+      }
+
+      .login-form {
+        max-width: 300px;
+        padding: 20px 30px 30px;
+        margin: 0 auto 20px;
+        background-color: #ffffff;
+        border: 2px solid #000000;
+        -webkit-border-radius: 8px;
+           -moz-border-radius: 8px;
+                border-radius: 8px;
+
+      }
+      .login-form .login-form-heading {
+        margin-bottom: 10px;
+      }
+      .login-form input[type="text"],
+      .login-form input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        position: relative;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 0px;
+        padding-left: 0px;
+        border-color:#000000;
+      }
+    </style>
+{% endblock %}
+</head>
+<body>
+	<div class="first">
+		<div class="site_title">
+			Self Service Password Reset System {% block page_id %}{% endblock %}
+		</div>
+	</div>
+		
+	{% block content %}{% endblock %} 
+	
+	{% block footer %}
+		<hr>
+		<div id="templatemo_footer"> Copyright © sortmeout will never disclose any information you share here, 
+		including your username, with any person, party or organization not authorized to work on your request on our behalf.</div>
+	{% endblock %}
+</body>
+</html>

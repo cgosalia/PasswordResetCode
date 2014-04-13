@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Member Signin{% endblock %}
+
+{% block page_id %}- Signin Page{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <form class="login-form" name="login_form"method="POST">
+		{% csrf_token %}
+        <h3 class="login-form-heading">Log In</h3>
+        <!--<input type="text" placeholder="Username" name="usernameText" onblur="if(validateFields(0) == false) { alert('Invalid Username. ');}">
+        <input type="password" placeholder="Password" name="passwordText" onblur="if(validateFields(1) == false) { alert('Password entered does not meet the requirements.It should contain: \n\r 1 letter in lower case\n\r 1 letter in upper case\n\r 1 special character from the @, #, _, $ and %. \n\rThe length must be at least 6 characters upto 20 characters.');}"> 
+        <button  type="button" id="submit" onclick="if(validateFields(2) == false){alert('Invalid Username or password entered.')}" >Log in</button> <br /><br />
+        <button  type="button" id="forgot_username" onclick="location.href='forgot_username.htm'" size=15>Forgot Username</button>
+        <button  type="button" id="forgot_password" onclick="location.href='forgot_password_step_1.htm'">Forgot Password</button>-->
+        
+        {{ form.non_field_errors }}
+        {% if message %}{{ message }}{% endif %}
+
+		<table border="0">
+		  	<tr>
+		    	<td width="20px"><label for="id_username">(Me)username</label></td>
+		    	<td width="5px">:</td>
+		    	<td >{{ form.username }}</td>
+		    	<td >{{ form.username.errors }}</td>
+	      	</tr>
+		  
+		  	<tr>
+		    	<td><label for="id_password">(Me)password</label></td>
+		    	<td>:</td>
+		    	<td>{{ form.password }}</td>
+		    	<td>{{ form.password.errors }}</td>
+	      	</tr>
+  		</table>
+	
+    	<p>
+			<input  class="buttons" id="id_submit" type="submit" value="log(me)in" name="keypress" />
+			<input  class="buttons" id="id_password" type="submit" value="sign(me)up" name="keypress" />
+		</p><p>
+			<!-- <input  class="buttons" id="id_forgot_username" type="submit" value="forgot(my)username" name="keypress" /> -->
+			<input  class="buttons" id="id_forgot_password" type="submit" value="forgot(my)password" name="keypress" />
+		</p>
+      </form>
+
+    </div> 
+{% endblock %}

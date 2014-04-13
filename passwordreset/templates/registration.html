@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}new member signup{% endblock %}
+
+{% block page_id %}- Signup Page{% endblock %}
+
+{% block content %}
+<form action="" method="POST">
+{% csrf_token %}
+	<p>
+		{{ form1.non_field_errors }}
+		{{ form2.non_field_errors }}
+		
+		<table width="100%" border="0">
+  			<tr>
+    			<td width="11%"><label for="id_firstname">First Name *</label></td>
+    			<td width="1%" >:</td>
+    			<td width="21%">{{ form2.first_name }}</td>
+    			<td width="67%">{{ form2.first_name.errors }}</td>
+  			</tr>
+
+ 			<tr>
+    			<td><label for="id_lastname">Last Name</label></td>
+    			<td>:</td>
+    			<td>{{ form2.last_name }}</td>
+			    <td>{{ form2.last_name.errors }}</td>
+ 			</tr>
+  
+  			<tr>
+    			<td><label for="id_dob">Birth Date *</label></td>
+    			<td>:</td>
+    			<td>{{ form1.dob }}</td>
+    			<td>{{ form1.dob.errors }}</td>
+  			</tr>
+  			
+  			<tr>
+    			<td><label for="id_address">Address *</label></td>
+    			<td>:</td>
+    			<td>{{ form1.address }}</td>
+    			<td>{{ form1.address.errors }}</td>
+  			</tr>
+  			
+  			<tr>
+    			<td><label for="id_email">Email Address *</label></td>
+    			<td>:</td>
+    			<td>{{ form2.email }}</td>
+    			<td>{{ form2.email.errors }}</td>
+  			</tr>
+  			
+  			<tr>
+    			<td><label for="id_phone_no">Contact Number</label></td>
+    			<td>:</td>
+    			<td>{{ form1.phone_no }}</td>
+    			<td>{{ form1.phone_no.errors }}</td>
+  			</tr>
+  			
+  			<tr>
+    			<td><label for="id_que1">Question 1 *</label></td>
+    			<td>:</td>
+    			<td>{{ form3.que1 }}</td>
+    			<td>{{ form3.que1.errors }}</td>
+  			</tr>
+  			
+  			<tr>
+    			<td><label for="id_ans1">Answer 1 *</label></td>
+    			<td>:</td>
+    			<td>{{ form3.ans1 }}</td>
+    			<td>{{ form3.ans1.errors }}</td>
+  			</tr>
+
+ 			<tr>
+    			<td><label for="id_que2">Question 2 *</label></td>
+    			<td>:</td>
+    			<td>{{ form3.que2 }}</td>
+			    <td>{{ form3.que2.errors }}</td>
+ 			</tr>
+ 			
+ 			<tr>
+    			<td><label for="id_ans1">Answer 2 *</label></td>
+    			<td>:</td>
+    			<td>{{ form3.ans2 }}</td>
+    			<td>{{ form3.ans2.errors }}</td>
+  			</tr>
+  
+  			<tr>
+    			<td><label for="id_que3">Question 3 *</label></td>
+    			<td>:</td>
+    			<td>{{ form3.que3 }}</td>
+			    <td>{{ form3.que3.errors }}</td>
+ 			</tr>
+ 			
+ 			<tr>
+    			<td><label for="id_ans3">Answer 3 *</label></td>
+    			<td>:</td>
+    			<td>{{ form3.ans3 }}</td>
+    			<td>{{ form3.ans3.errors }}</td>
+  			</tr>
+  
+  			<tr>
+    			<td><label for="id_username">Username (for login) *</label></td>
+    			<td>:</td>
+    			<td>{{ form2.username }}</td>
+    			<td>{{ form2.username.errors }}</td>
+  			</tr>
+  			
+  			<tr>
+    			<td><label for="id_password">Password (for login) *</label></td>
+    			<td>:</td>
+    			<td>{{ form2.password }}</td>
+    			<td>{{ form2.password.errors }}</td>
+  			</tr>
+  			
+  			<tr>
+    			<td><label for="id_repassword">Confirm Password *</label></td>
+    			<td>:</td>
+    			<td>{{ form2.repassword }}</td>
+    			<td>{{ form2.repassword.errors }}</td>
+  			</tr>
+		</table>
+
+		<p><input type="submit" value="sign(me)up" name="keypress" class="buttons" /></p>
+	</p>
+</form>
+{% endblock %}
