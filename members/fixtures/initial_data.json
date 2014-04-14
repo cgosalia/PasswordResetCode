@@ -1,0 +1,37 @@
+[
+  {
+    "model": "members.SecurityQuestions",
+    "pk": 1,
+    "fields": {
+      "question": "An ordinary girl/boy in my class."
+    }
+  },
+  {
+    "model": "members.SecurityQuestions",
+    "pk": 2,
+    "fields": {
+      "question": "A pet I would never want to have."
+    }
+  },
+  {
+    "model": "members.SecurityQuestions",
+    "pk": 3,
+    "fields": {
+      "question": "This is definitely not my mother's maiden name."
+    }
+  },
+  {
+    "model": "members.SecurityQuestions",
+    "pk": 4,
+    "fields": {
+      "question": "I never worked for this organization."
+    }
+  },
+  {
+    "model": "members.SecurityQuestions",
+    "pk": 5,
+    "fields": {
+      "question": "A Christmas gift I would never ask for."
+    }
+  }
+]
