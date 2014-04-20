@@ -3,35 +3,70 @@
     "model": "members.SecurityQuestions",
     "pk": 1,
     "fields": {
-      "question": "An ordinary girl/boy in my class."
+      "question": "What street did you live on in third grade?"
     }
   },
   {
     "model": "members.SecurityQuestions",
     "pk": 2,
     "fields": {
-      "question": "A pet I would never want to have."
+      "question": "Where were you when you had your first kiss?"
     }
   },
   {
     "model": "members.SecurityQuestions",
     "pk": 3,
     "fields": {
-      "question": "This is definitely not my mother's maiden name."
+      "question": "What is the first name of the boy or girl that you first kissed?"
     }
   },
   {
     "model": "members.SecurityQuestions",
     "pk": 4,
     "fields": {
-      "question": "I never worked for this organization."
+      "question": "What are the last 5 digits of your driver's license number?"
     }
   },
   {
     "model": "members.SecurityQuestions",
     "pk": 5,
     "fields": {
-      "question": "A Christmas gift I would never ask for."
+      "question": "What are the last 5 digits of your credit card?"
+    }
+  },
+  {
+    "model": "members.SecurityQuestions",
+    "pk":6,
+    "fields": {
+      "question": "What are the last 5 digits of your SSN?"
+    }
+  },
+  {
+    "model": "members.SecurityQuestions",
+    "pk": 7,
+    "fields": {
+      "question": "Which teacher you hated the most in your school?"
+    }
+  },
+  {
+    "model": "members.SecurityQuestions",
+    "pk": 8,
+    "fields": {
+      "question": "The actor I don't like on screen."
+    }
+  },
+  {
+    "model": "members.SecurityQuestions",
+    "pk": 9,
+    "fields": {
+      "question": "What is not my mother's maiden name?"
+    }
+  },
+  {
+    "model": "members.SecurityQuestions",
+    "pk": 10,
+    "fields": {
+      "question": "what is the name of your play school?"
     }
   }
 ]
